@@ -43,7 +43,7 @@ function checkTweet(text){
   } else {
     for (var val of names) {
       if (text.includes(val)) {
-        console.log(`Not safecheck and tweet is ${text}`);
+        checkBalancesandBuy(val.toUpperCase());
       }
     }
   }
