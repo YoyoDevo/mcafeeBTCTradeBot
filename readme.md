@@ -10,21 +10,21 @@ How to use:
   This monitors a users twitter stream (instant) and acts on every
   tweet that It sees. It is currently pointed at the correct one.
   
-  '''
+  ```
   var stream = T.stream('statuses/filter', { follow : '961445378' });
   /* You just need to change the follow ID to point it at someone else */
-  '''
+  ```
 
   To Get It To Start
   1. You must CD into directory and type "npm install" (make sure npm & node.js is installed). (This will install the necessary dependencies. 
   2. You must give it your API_KEY and Secret on line (6 & 7) from Poloniex to make buys, you must also get your twitter keys here. (as shown below)
-  '''
+  ```
   const API_KEY = '';
   const SECRET = '';
-'''
+  ```
   
   3. You must go to https://apps.twitter.com/ to get your consumer_key, consumer_secret, access_token, and access_token_secret from twitter and place it here
-  '''
+  ```
   
 const T = new Twit({
   consumer_key: '',
@@ -32,7 +32,7 @@ const T = new Twit({
   access_token: '',
   access_token_secret: ''
 });
-'''
+```
 
   4. To start bot type "node index.js" in terminal
   
