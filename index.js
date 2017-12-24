@@ -62,7 +62,9 @@ function isIn(id) {
 
 function checkBalancesandBuy(val) {
   poloniex.returnBalances((err, balance) => {
-    if (err) throw err;
+    if (err) {
+      console.log(err);
+    }
     if (balance.BTC >= buyAmount) {
       const currencyPair = `BTC_${val}`;
       poloniex.returnOrderBook(currencyPair, 1, (err, result) => {
