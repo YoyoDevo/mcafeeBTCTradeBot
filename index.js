@@ -65,13 +65,15 @@ function checkBalancesandBuy(val) {
     if (err) {
       console.log(err);
     }
-    if (balance.BTC >= buyAmount) {
-      const currencyPair = `BTC_${val}`;
-      poloniex.returnOrderBook(currencyPair, 1, (err, result) => {
-        if (err) throw err;
-        let buyPrice = result.asks[0][0]; //might want to increase by a fraction of a percent.
-        buy(buyPrice, currencyPair);
-      })
+    else {
+      if (balance.BTC >= buyAmount) {
+        const currencyPair = `BTC_${val}`;
+        poloniex.returnOrderBook(currencyPair, 1, (err, result) => {
+          if (err) throw err;
+          let buyPrice = result.asks[0][0]; //might want to increase by a fraction of a percent.
+          buy(buyPrice, currencyPair);
+        })
+      }
     }
   })
 }
