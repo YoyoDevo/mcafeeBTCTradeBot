@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const names = [];
+var names = [];
 
 axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=500')
   .then((response) => {
